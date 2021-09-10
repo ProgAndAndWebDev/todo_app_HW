@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable name="taskFragModel"
+            type="com.example.todo_app_hw.viewModel.TaskFragViewModel"/>
+
+    </data>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.fragment.TaskFragment">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginHorizontal="20dp">
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/add_and_update_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="25dp"
+                android:layout_marginBottom="25dp"
+                android:clickable="true"
+                app:status="@{taskFragModel.statusBtn}"
+                app:viewModel="@{taskFragModel}"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:srcCompat="@drawable/ic_baseline_done_24" />
+
+
+            <EditText
+                android:id="@+id/description_et"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="5dp"
+                android:drawableStart="@drawable/ic_baseline_edit_24"
+                android:hint="description"
+                android:paddingVertical="10dp"
+                android:layout_marginTop="15dp"
+                android:paddingEnd="24dp"
+                android:background="@drawable/bg_edit_text" android:drawableTint="#989898"
+                android:paddingHorizontal="15dp"
+                android:textColor="#787878"
+                android:textStyle="bold"
+                android:layout_marginBottom="40dp"
+                android:drawablePadding="5dp"
+                android:text="@={taskFragModel.contentNote}"
+                app:layout_constraintEnd_toEndOf="@+id/editText"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="@+id/editText"
+                app:layout_constraintTop_toBottomOf="@+id/editText" />
+
+            <EditText
+                android:id="@+id/editText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="title"
+                android:layout_marginHorizontal="5dp"
+                android:drawableLeft="@drawable/ic_baseline_add_task_24"
+                android:layout_marginTop="20dp"
+                android:paddingEnd="24dp"
+                android:paddingVertical="10dp"
+                android:background="@drawable/bg_edit_text"
+                android:drawableTint="#989898"
+                android:paddingHorizontal="15dp"
+                android:textColor="#787878"
+                android:textStyle="bold"
+                android:layout_marginBottom="40dp"
+                android:drawablePadding="5dp"
+                android:text="@={taskFragModel.titleNote}"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/add_and_update_btn"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/appTitle" />
+
+            <Spinner
+                android:id="@+id/priorities_spinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="5dp"
+                android:entries="@array/priorities"
+                android:background="@drawable/bg_edit_text"
+                android:drawableLeft="@drawable/ic_baseline_search_24"
+                android:drawableTint="#989898"
+                android:paddingHorizontal="15dp"
+                android:textColor="#787878"
+                android:layout_marginTop="15dp"
+                android:textStyle="bold"
+                android:layout_marginBottom="40dp"
+                android:drawablePadding="5dp"
+                android:paddingVertical="10dp"
+                android:paddingEnd="24dp"
+                app:layout_constraintEnd_toEndOf="@+id/description_et"
+                app:layout_constraintStart_toStartOf="@+id/description_et"
+                app:layout_constraintTop_toBottomOf="@+id/description_et"
+                app:viewModelSpinner="@{taskFragModel.priorityNote}"
+                />
+
+            <ImageView
+                android:id="@+id/date_pickerButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/bg_btn_"
+                android:backgroundTint="@android:color/transparent"
+                android:drawableLeft="@drawable/ic_baseline_date_range_24"
+                android:src="@drawable/ic_baseline_date_range_24"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="@+id/priorities_spinner"
+                app:layout_constraintTop_toBottomOf="@+id/priorities_spinner"
+                app:viewModelDate="@{taskFragModel.dateNote}" />
+
+            <ImageView
+                android:id="@+id/time_pickerButton"
+                viewModelTime="@{taskFragModel.timeNote}"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_btn_"
+                android:backgroundTint="@android:color/transparent"
+                android:gravity="center"
+                android:layout_marginEnd="15dp"
+                android:src="@drawable/ic_baseline_access_time_24"
+                android:textAlignment="gravity"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="@+id/date_pickerButton"
+                app:layout_constraintEnd_toStartOf="@+id/date_pickerButton"
+                app:layout_constraintTop_toTopOf="@+id/date_pickerButton" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/appTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Add Note"
+                android:textStyle="bold"
+                android:textColor="@android:color/black"
+                android:textSize="30sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="RtlSymmetry" />
+
+            <!--            <LinearLayout-->
+<!--                android:id="@+id/bottomBar"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="50dp"-->
+<!--                android:gravity="center_horizontal"-->
+<!--                android:visibility="gone"-->
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                app:layout_constraintEnd_toEndOf="parent"-->
+<!--                app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                android:orientation="horizontal">-->
+
+<!--                <com.yahiaangelo.markdownedittext.MarkdownStylesBar-->
+<!--                    android:id="@+id/styleBar"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginStart="10dp"-->
+<!--                    android:layout_marginEnd="10dp"-->
+<!--                    android:layout_marginBottom="6dp"-->
+<!--                    android:elevation="5dp"-->
+<!--                    android:paddingStart="10dp"-->
+<!--                    tools:ignore="RtlSymmetry" />-->
+
+<!--            </LinearLayout>-->
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </FrameLayout>
+</layout>

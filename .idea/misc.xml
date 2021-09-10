@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/msi/AndroidStudioProjects/todo_app_HW/app/src/main/res/drawable/bg_btn_.xml" value="0.3411458333333333" />
+        <entry key="..\:/Users/msi/AndroidStudioProjects/todo_app_HW/app/src/main/res/drawable/bg_check_btn.xml" value="0.32864583333333336" />
+        <entry key="..\:/Users/msi/AndroidStudioProjects/todo_app_HW/app/src/main/res/drawable/bg_edit_text.xml" value="0.35104166666666664" />
+        <entry key="..\:/Users/msi/AndroidStudioProjects/todo_app_HW/app/src/main/res/drawable/bg_search.xml" value="0.3567708333333333" />
+        <entry key="..\:/Users/msi/AndroidStudioProjects/todo_app_HW/app/src/main/res/drawable/bg_title.xml" value="0.3567708333333333" />
+        <entry key="..\:/Users/msi/AndroidStudioProjects/todo_app_HW/app/src/main/res/drawable/checked.xml" value="0.32864583333333336" />
+        <entry key="..\:/Users/msi/AndroidStudioProjects/todo_app_HW/app/src/main/res/drawable/custom_checkbox.xml" value="0.32864583333333336" />
+        <entry key="..\:/Users/msi/AndroidStudioProjects/todo_app_HW/app/src/main/res/drawable/ic_baseline_access_time_24.xml" value="0.3411458333333333" />
+        <entry key="..\:/Users/msi/AndroidStudioProjects/todo_app_HW/app/src/main/res/drawable/ic_baseline_add_task_24.xml" value="0.3307291666666667" />
+        <entry key="..\:/Users/msi/AndroidStudioProjects/todo_app_HW/app/src/main/res/drawable/ic_baseline_assistant_photo_blue.xml" value="0.3411458333333333" />
+        <entry key="..\:/Users/msi/AndroidStudioProjects/todo_app_HW/app/src/main/res/drawable/ic_baseline_assistant_photo_orange.xml" value="0.3411458333333333" />
+        <entry key="..\:/Users/msi/AndroidStudioProjects/todo_app_HW/app/src/main/res/drawable/ic_baseline_date_range_24.xml" value="0.3411458333333333" />
+        <entry key="..\:/Users/msi/AndroidStudioProjects/todo_app_HW/app/src/main/res/drawable/ic_baseline_edit_24.xml" value="0.3307291666666667" />
+        <entry key="..\:/Users/msi/AndroidStudioProjects/todo_app_HW/app/src/main/res/drawable/ic_baseline_search_24.xml" value="0.3411458333333333" />
+        <entry key="..\:/Users/msi/AndroidStudioProjects/todo_app_HW/app/src/main/res/drawable/unchecked.xml" value="0.32864583333333336" />
+        <entry key="..\:/Users/msi/AndroidStudioProjects/todo_app_HW/app/src/main/res/layout/activity_main.xml" value="0.25526315789473686" />
+        <entry key="..\:/Users/msi/AndroidStudioProjects/todo_app_HW/app/src/main/res/layout/fragment_home.xml" value="0.33" />
+        <entry key="..\:/Users/msi/AndroidStudioProjects/todo_app_HW/app/src/main/res/layout/fragment_task.xml" value="0.33" />
+        <entry key="..\:/Users/msi/AndroidStudioProjects/todo_app_HW/app/src/main/res/layout/item_note.xml" value="0.33" />
+        <entry key="..\:/Users/msi/AndroidStudioProjects/todo_app_HW/app/src/main/res/layout/item_note_.xml" value="0.35104166666666664" />
+        <entry key="..\:/Users/msi/AndroidStudioProjects/todo_app_HW/app/src/main/res/menu/spinner_priority.xml" value="0.325" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
