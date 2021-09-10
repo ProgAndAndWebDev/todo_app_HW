@@ -17,55 +17,20 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/constraintLayout"
-                android:layout_width="match_parent"
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/appTitle"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@drawable/bg_title"
-                android:paddingBottom="40dp"
-                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginStart="14dp"
+                android:layout_marginTop="45dp"
+                android:paddingStart="2dp"
+                android:text="My Note"
+                android:textStyle="bold"
+                android:textColor="@android:color/black"
+                android:textSize="35sp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent">
-
-                <EditText
-                    android:id="@+id/filter"
-                    android:layout_width="0dp"
-                    android:layout_height="48dp"
-                    android:layout_marginHorizontal="20dp"
-                    android:layout_marginTop="25dp"
-                    android:layout_marginBottom="40dp"
-                    android:background="@drawable/bg_search"
-                    android:drawableLeft="@drawable/ic_baseline_search_24"
-                    android:drawablePadding="5dp"
-                    android:drawableTint="#989898"
-                    android:hint="Search"
-                    android:iconifiedByDefault="false"
-                    android:inputType="textPersonName"
-                    android:paddingHorizontal="15dp"
-                    android:text="@={homeFragModel.searchText}"
-                    android:textColor="#787878"
-                    android:textStyle="bold"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/appTitle" />
-
-                <com.google.android.material.textview.MaterialTextView
-                    android:id="@+id/appTitle"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="14dp"
-                    android:layout_marginTop="45dp"
-                    android:paddingStart="2dp"
-                    android:text="My Note"
-                    android:textColor="@android:color/white"
-                    android:textSize="35sp"
-                    android:textStyle="bold"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    tools:ignore="RtlSymmetry" />
-
-            </androidx.constraintlayout.widget.ConstraintLayout>
-
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="RtlSymmetry" />
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/recycler"
@@ -74,15 +39,39 @@
                 android:backgroundTint="#301313"
                 android:orientation="vertical"
                 android:visibility="visible"
+                android:layout_marginTop="20dp"
                 app:items="@{homeFragModel.notes}"
                 app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/constraintLayout"
+                app:layout_constraintTop_toBottomOf="@+id/filter"
                 tools:listitem="@layout/item_note" />
 
-
+            <EditText
+                android:id="@+id/filter"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="@={homeFragModel.searchText}"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.373"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/appTitle"
+                android:iconifiedByDefault="false"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_marginTop="25dp"
+                android:background="@drawable/bg_edit_text"
+                android:drawableLeft="@drawable/ic_baseline_search_24"
+                android:drawableTint="#989898"
+                android:paddingHorizontal="15dp"
+                android:textColor="#787878"
+                android:textStyle="bold"
+                android:layout_marginBottom="40dp"
+                android:drawablePadding="5dp"
+                android:layout_marginHorizontal="20dp"
+                android:hint="Search"
+                />
 
             <com.google.android.material.floatingactionbutton.FloatingActionButton
                 android:id="@+id/floating_task"
